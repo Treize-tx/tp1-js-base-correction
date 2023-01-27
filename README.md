@@ -14,6 +14,7 @@
   - https://developer.mozilla.org/fr/docs/Web/JavaScript/Guide/Loops_and_iteration
 - Les conditions :
   - https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Statements/if...else
+  - https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Operators/Strict_equality
 - Les sélecteurs :
   - https://developer.mozilla.org/fr/docs/Web/API/Document/querySelector
   - https://developer.mozilla.org/fr/docs/Web/API/Document/querySelectorAll
@@ -22,6 +23,9 @@
 - Créer un élément HTML :
   - https://developer.mozilla.org/fr/docs/Web/API/Document/createElement
 - Modifier un élément HTML (contenu HTML, contenu texte, attributs)
+  - https://developer.mozilla.org/fr/docs/Web/API/Element/setAttribute
+- Les fonctions
+  - https://developer.mozilla.org/fr/docs/Web/JavaScript/Guide/Functions
 - DEBUG du code JS : console.log VS point d'arrêt
   - https://developer.mozilla.org/fr/docs/Web/API/Console
   - https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Statements/debugger
