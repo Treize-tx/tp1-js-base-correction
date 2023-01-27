@@ -24,7 +24,7 @@
 - Modifier un élément HTML (contenu HTML, contenu texte, attributs)
 - DEBUG du code JS : console.log VS point d'arrêt
   - https://developer.mozilla.org/fr/docs/Web/API/Console
-  - https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Statements/debugger#:~:text=L'instruction%20debugger%20permet%20de,instruction%20n'aura%20aucun%20effet.
+  - https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Statements/debugger
 
 ## Ressources
 
