@@ -39,9 +39,9 @@
         /*1 fonction qui récupère le nombre d'article (les articles sont identifiés par la classe article et présents
          *dans la div ayant l'id newsList) sur la page et l'affiche dans la balise h3
          */
-        function displayArticleCount() {
+        function displayArticleCount() { //pour déclarer une fonction on utilise le mot clé function, suivi du nom puis des paramètres entre parenthèses
             const newsList = document.querySelector('#newsList');
-            const articles = newsList.querySelectorAll('#newsList .article');
+            const articles = newsList.querySelectorAll('#newsList .article'); //retourne une liste d'élément HTML
             const h3 = document.querySelector('h3');
 
             if (articles.length > 1)
@@ -58,7 +58,7 @@
          *Pour sélectionner un input on peut faire 'input[name=titleToAdd]'
          */
         const form = document.querySelector('form');
-        form.addEventListener('submit', event => {
+        form.addEventListener('submit', event => { //
             event.preventDefault(); //permet de bloquer le rechargement de la page à la validation du formulaire
             if (!checkForm()) {
                 return false;
@@ -89,24 +89,26 @@
             return false; //permet de bloquer le rechargement de la page à la validation du formulaire
         });
 
-        /*Créer une méthode qui vérifie que les donnéees du formulaire sont bien renseignés
+        /*Créer une fonction qui vérifie que les donnéees du formulaire sont bien renseignés
          *De plus, si un champ est vide alors il devra être encadré en rouge
          */
         function checkForm() {
-            const titleToAdd = form.querySelector('input[name=titleToAdd]');
-            const descriptionToAdd = form.querySelector('textarea[name=descriptionToAdd]');
+            const titleToAdd = form.querySelector('input[name=titleToAdd]'); //ici on récupère 1 seul élément ayant le tag input et l'attribut name avec la valeur titleToAdd
+            const descriptionToAdd = form.querySelector('textarea[name=descriptionToAdd]'); //ici on récupère 1 seul élément ayant le tag textarea et l'attribut name avec la valeur descriptionToAdd
             let isValid = true;
 
             titleToAdd.setAttribute('style', 'border-color: inherit');
             descriptionToAdd.setAttribute('style', 'border-color: inherit');
 
             if (titleToAdd.value === '') {
-                titleToAdd.setAttribute('style', 'border-color: red');
+                consol.error('Le champ titleToAdd n\'a pas été renseigné'); //console.error permet de mettre en avant (en rouge) un message dans la console
+                titleToAdd.setAttribute('style', 'border-color: red'); //la méthode setAttribute permet de définir la valeur d'un attribut HTML de l'élément
                 isValid = false;
             }
 
             if (descriptionToAdd.value === '') {
-                descriptionToAdd.setAttribute('style', 'border-color: red');
+                consol.error('Le champ descriptionToAdd n\'a pas été renseigné'); //console.error permet de mettre en avant (en rouge) un message dans la console
+                descriptionToAdd.setAttribute('style', 'border-color: red'); //la méthode setAttribute permet de définir la valeur d'un attribut HTML de l'élément
                 isValid = false;
             }
 
