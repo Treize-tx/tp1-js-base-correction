@@ -60,3 +60,11 @@ function submitForm(event) {
 
     return false; //permet de bloquer le rechargement de la page à la validation du formulaire
 }
+
+function resetForm(){
+    const titleToAdd = form.querySelector('input[name=titleToAdd]'); //on utilise un sélecteur par attribut [attrName=attrValue]
+    const descriptionToAdd = form.querySelector('textarea[name=descriptionToAdd]'); //on utilise un sélecteur par attribut [attrName=attrValue]
+
+    titleToAdd.value = '';
+    descriptionToAdd.value = '';
+}
