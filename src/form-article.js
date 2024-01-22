@@ -10,13 +10,13 @@ function checkForm() {
     descriptionToAdd.setAttribute('style', 'border-color: inherit');
 
     if (titleToAdd.value === '') {
-        console.error('Le champ titleToAdd n\'a pas été renseigné'); //console.error permet de mettre en avant (en rouge) un message dans la console
+        logMessage('Le champ titleToAdd n\'a pas été renseigné', 'error'); //console.error permet de mettre en avant (en rouge) un message dans la console
         titleToAdd.setAttribute('style', `border-color: ${ERROR_COLOR}`); //la méthode setAttribute permet de définir la valeur d'un attribut HTML de l'élément
         isValid = false;
     }
 
     if (descriptionToAdd.value === '') {
-        console.error('Le champ descriptionToAdd n\'a pas été renseigné'); //console.error permet de mettre en avant (en rouge) un message dans la console
+        logMessage('Le champ descriptionToAdd n\'a pas été renseigné', 'error'); //console.error permet de mettre en avant (en rouge) un message dans la console
         descriptionToAdd.setAttribute('style', `border-color: ${ERROR_COLOR}`); //la méthode setAttribute permet de définir la valeur d'un attribut HTML de l'élément
         isValid = false;
     }
