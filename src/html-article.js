@@ -4,6 +4,9 @@
 function displayArticleCount() { //pour déclarer une fonction on utilise le mot clé function, suivi du nom puis des paramètres entre parenthèses
     const newsList = document.querySelector('#newsList');
     const articles = newsList.querySelectorAll('.article'); //Permet de récupérer les enfants de l'élément newsList ayant la classe article
+    
+    //l'équivalent en 1 ligne
+    //const articles = document.querySelectorAll('#newsList .article');
 
     updateArticleCount(articles.length)
 }
