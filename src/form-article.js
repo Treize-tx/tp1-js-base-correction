@@ -39,8 +39,8 @@ function submitForm(event) {
     const titleToAdd = form.querySelector('input[name=titleToAdd]');
     const descriptionToAdd = form.querySelector('textarea[name=descriptionToAdd]');
 
-    const title = titleToAdd.value;
-    const description = descriptionToAdd.value;
+    const title = titleToAdd.value; //l'attribut value eest un raccourci pour .attr(value)
+    const description = descriptionToAdd.value; //l'attribut value eest un raccourci pour .attr(value)
 
     const article = document.createElement('article');
     const span = document.createElement('span');
