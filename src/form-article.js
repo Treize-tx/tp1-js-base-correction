@@ -55,8 +55,7 @@ function submitForm(event) {
 
     displayArticleCount();
 
-    titleToAdd.value = '';
-    descriptionToAdd.value = '';
+    resetForm();
 
     return false; //permet de bloquer le rechargement de la page à la validation du formulaire
 }
