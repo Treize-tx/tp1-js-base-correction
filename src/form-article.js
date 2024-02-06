@@ -6,20 +6,15 @@ function checkForm() {
     const descriptionToAdd = form.querySelector('textarea[name=descriptionToAdd]'); //ici on récupère 1 seul élément ayant le tag textarea et l'attribut name avec la valeur descriptionToAdd
     let isValid = true;
 
+    try {
+        return new article = createArticle(title, description);
+    } catch (RequireFieldError) {
+        console.error(RequireFieldError);
+        isValid = false;
+    }
+
     titleToAdd.setAttribute('style', 'border-color: inherit');
     descriptionToAdd.setAttribute('style', 'border-color: inherit');
-
-    if (titleToAdd.value === '') {
-        logMessage('Le champ titleToAdd n\'a pas été renseigné', 'error'); //console.error permet de mettre en avant (en rouge) un message dans la console
-        titleToAdd.setAttribute('style', `border-color: ${ERROR_COLOR}`); //la méthode setAttribute permet de définir la valeur d'un attribut HTML de l'élément
-        isValid = false;
-    }
-
-    if (descriptionToAdd.value === '') {
-        logMessage('Le champ descriptionToAdd n\'a pas été renseigné', 'error'); //console.error permet de mettre en avant (en rouge) un message dans la console
-        descriptionToAdd.setAttribute('style', `border-color: ${ERROR_COLOR}`); //la méthode setAttribute permet de définir la valeur d'un attribut HTML de l'élément
-        isValid = false;
-    }
 
     return isValid;
 }
@@ -32,7 +27,8 @@ function checkForm() {
  */
 function submitForm(event) {
     event.preventDefault(); //permet de bloquer le rechargement de la page à la validation du formulaire
-    if (!checkForm()) {
+    new article = checkForm();
+    if (!article) {
         return false;
     }
 
@@ -42,16 +38,7 @@ function submitForm(event) {
     const title = titleToAdd.value; //l'attribut value eest un raccourci pour .attr(value)
     const description = descriptionToAdd.value; //l'attribut value eest un raccourci pour .attr(value)
 
-    const article = document.createElement('article');
-    const span = document.createElement('span');
-    const p = document.createElement('p');
-
-    span.innerText = title;
-    p.innerText = description;
-    article.appendChild(span);
-    article.appendChild(p);
-    article.classList.add('article'); //article.setAttribute('class', 'article');
-    document.querySelector('#newsList').appendChild(article);
+    const article = createArticle(title, description);
 
     displayArticleCount();
 

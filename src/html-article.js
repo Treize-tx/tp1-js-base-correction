@@ -21,3 +21,16 @@ function updateArticleCount(count){
         h3.innerText = `There is ${count} article`;
     }
 }
+
+function createArticle(title, description) {
+    const article = document.createElement('article');
+    const span = document.createElement('span');
+    const p = document.createElement('p');
+
+    span.innerText = title;
+    p.innerText = description;
+    article.appendChild(span);
+    article.appendChild(p);
+    article.classList.add('article');
+    return article;
+}
